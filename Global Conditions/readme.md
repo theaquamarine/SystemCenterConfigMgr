@@ -27,3 +27,10 @@ To just return the device's manufacturer, use:
 ```powershell
 New-CMGlobalConditionWqlQuery -Name "Manufacturer" -Description "Manufacturer" -DeviceType Windows -Class Win32_ComputerSystem -Property Manufacturer -DataType String
 ```
+
+
+## OS Build Number
+
+Build number returned as an Integer, so numerical comparisons can be used.
+
+`New-CMGlobalConditionWqlQuery -Name 'Operating System Build Number' -DataType Integer -Namespace 'root\cimv2'-Class Win32_OperatingSystem -Property BuildNumber`
